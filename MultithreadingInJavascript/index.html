@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Threading Comparison</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .section {
+        margin-bottom: 20px;
+      }
+      #logs {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background: #f9f9f9;
+        max-height: 300px;
+        overflow-y: auto;
+      }
+      #output {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 8px;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Threading Comparison</h1>
+
+    <div class="section">
+      <label for="numThreads">Number of Threads: </label>
+      <select id="numThreads">
+        <option value="1">1 (Single Thread)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <label for="primeLimit">Calculate primes up to: </label>
+      <input type="number" id="primeLimit" value="100000" />
+    </div>
+
+    <div class="section">
+      <button id="singleThreadBtn">Run Single-Threaded</button>
+      <button id="multiThreadBtn">Run Multi-Threaded</button>
+    </div>
+
+    <div id="logs"></div>
+    <div id="output"></div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

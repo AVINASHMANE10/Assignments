@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-threaded File Downloader</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Multi-threaded File Downloader</h1>
+      <div class="add-download">
+        <textarea
+          id="fileUrls"
+          placeholder="Enter file URLs (one per line)"
+        ></textarea>
+        <div class="use-default">
+          <label>
+            <input type="checkbox" id="useDefaultUrls" />
+            Use Default URLs
+          </label>
+        </div>
+        <button id="startDownload">Start Downloads</button>
+      </div>
+      <div class="download-options">
+        <label>
+          Number of Threads (Max 8):
+          <input type="number" id="threadCount" min="1" max="8" value="1" />
+        </label>
+      </div>
+      <div id="downloadList"></div>
+      <div id="log"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
